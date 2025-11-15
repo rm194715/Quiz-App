@@ -1,0 +1,137 @@
+/* Background */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Main Card */
+.quiz-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  width: 95%;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Question */
+.question-text {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Choices Container */
+.choices-area {
+  margin-top: 20px;
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.16);
+  border: 2px solid transparent;
+  transition: 0.25s ease;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+  border-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Prefix A/B/C/D */
+.choice-prefix {
+  padding: 1.3rem 2rem;
+  background: #00000073;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Choice Text */
+.choice-text {
+  padding: 1.3rem;
+  width: 100%;
+  color: #fff;
+}
+
+/* Correct / Incorrect States */
+.correct {
+  background-color: #28a745 !important;
+}
+
+.incorrect {
+  background-color: #dc3545 !important;
+}
+
+/* HUD */
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.hud-main-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Progress Bar */
+#progressBar {
+  width: 20rem;
+  height: 1.2rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+#progressBarFull {
+  height: 100%;
+  background: #00ffea;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Loader */
+#loader {
+  border: 1rem solid rgba(255, 255, 255, 0.4);
+  border-top: 1rem solid #00ffe7;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  animation: spin 1.4s linear infinite;
+  margin: 70px auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}

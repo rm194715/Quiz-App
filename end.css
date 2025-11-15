@@ -1,0 +1,105 @@
+/* Background same as game.css */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: #fff;
+}
+
+/* Card container */
+.card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  width: 90%;
+  max-width: 550px;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255,255,255,0.35);
+}
+
+/* Score number */
+.score-display {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #00ffe7;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0,255,231,0.7);
+}
+
+/* Input field */
+input {
+  width: 90%;
+  padding: 14px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border-left: 5px solid #00ffe7;
+  transition: 0.3s ease;
+}
+
+input::placeholder {
+  color: #eaeaea;
+}
+
+input:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 15px rgba(0,255,231,0.8);
+}
+
+/* Button */
+.btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: #00ffe7;
+  color: #000;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  margin: 10px;
+  display: inline-block;
+  box-shadow: 0 0 12px rgba(0, 255, 231, 0.6);
+  transition: 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  background: #33fff2;
+  box-shadow: 0 0 25px rgba(0, 255, 231, 1);
+}
+
+/* Disabled button */
+.btn:disabled {
+  background: #7ff6ea6e;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* button wrapper */
+.buttons {
+  margin-top: 20px;
+}
